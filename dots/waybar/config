@@ -1,0 +1,104 @@
+{
+"layer": "top",
+"modules-left": ["tray", "hyprland/workspaces", "custom/pacman"],
+"modules-center": ["clock"],
+"modules-right": ["pulseaudio", "hyprland/language", "network", "group/power"],
+"height": 30,
+"spacing": 5,
+"margin-top": 4,
+"margin-left": 5,
+"margin-right": 5,
+"margin-bottom": 2,
+
+"tray": {
+"icon-size": 18,
+"spacing": 8,
+"tooltip": false
+},
+
+"hyprland/workspaces": {
+"format": "{icon}",
+"format-icons": {
+"1": "1",
+"2": "2",
+"3": "3",
+"4": "4",
+"5": "5",
+},
+"persistent-workspaces": {
+"*": 5,
+},
+"tooltip": false
+},
+
+"custom/pacman": {
+"format": "{} updates",
+"interval": 1000,
+"exec": "checkupdates | wc -l",
+"exec-if": "exit 0",
+"on-click": "kitty sh -c 'yay; sudo pacman -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+"signal": 8,
+"tooltip": false
+},
+
+"clock": {
+"format": "{:%H:%M}",
+"tooltip": false
+},
+
+"pulseaudio": {
+"format": "vol {volume}%",
+"scroll-step": 5,
+"max-volume": 150,
+"on-click": "pavucontrol",
+"tooltip": false
+},
+
+"hyprland/language": {
+"format": "lang {short}",
+"tooltip": false
+},
+
+"network": {
+"interval": 5,
+"format": "{}",
+"tooltip": false,
+"format-ethernet": "eth {bandwidthTotalBytes}",
+"format-wifi": "wifi {bandwidthTotalBytes}",
+"format-disconnected": "not connected",
+},
+
+"group/power": {
+"orientation": "horizontal",
+"drawer": {
+"children-class": "not-power",
+"transition-duration": 300,
+},
+"modules": [
+"custom/power",
+"custom/lock",
+"custom/reboot",
+"custom/quit",
+]
+},
+"custom/quit": {
+"format": "󰗼",
+"tooltip": false,
+"on-click": "hyprctl dispatch exit"
+},
+"custom/lock": {
+"format": "󰍁",
+"tooltip": false,
+"on-click": "hyprlock"
+},
+"custom/reboot": {
+"format": "󰜉",
+"tooltip": false,
+"on-click": "reboot"
+},
+"custom/power": {
+"format": "",
+"tooltip": false,
+"on-click": "shutdown now"
+},
+}
