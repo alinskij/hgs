@@ -2,7 +2,7 @@
 
 # Installing dependencies
 
-echo -e "\e[1;32mInstalling dependencies...\e[m"
+cd; echo -e "\e[1;32mInstalling dependencies...\e[m"
 sudo pacman -S wget nerd-fonts qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprland hyprlock hyprpaper hyprpolkitagent rofi-wayland waybar kitty starship nwg-look
 
 # Configuring starship
@@ -23,7 +23,7 @@ fi
 # Backuping old configs
 
 echo -e "\e[1;32mBackuping old configs...\e[m"
-cd; tar -cf hgs_backup.tar ~/.config/hypr ~/.config/waybar ~/.config/rofi ~/.config/starship.toml ~/.config/kitty ~/.config/gtk-4.0
+tar -cf hgs_backup.tar ~/.config/hypr ~/.config/waybar ~/.config/rofi ~/.config/starship.toml ~/.config/kitty ~/.config/gtk-4.0
 
 # Importing new configs
 
@@ -40,12 +40,12 @@ cp -rf ~/hgs/hgs_wallpapers ~/Pictures
 echo -e "\e[1;32mInstalling theme, icons and cursors...\e[m"
 
 wget -q https://github.com/sainnhe/capitaine-cursors/archive/refs/heads/master.tar.gz
-tar -xf capitaine-cursors-master.tar.gz; rm -rf capitaine-cursors-master.tar.gz; mv -f ~/capitaine-cursors-master/capitaine-cursors-master ~/capitaine-cursors-master/capitaine
-sudo cp -rf ~/capitaine-cursors-master/capitaine /usr/share/icons; rm -rf capitaine-cursors-master
+tar -xf master.tar.gz; rm -rf master.tar.gz; mv -f ~/capitaine-cursors-master/ ~/capitaine
+sudo cp -rf ~/capitaine /usr/share/icons; rm -rf capitaine
 
 mkdir ~/.config/gtk-4.0; cp -rf ~/hgs/dots/gtk ~/.config
 
 wget -q https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/archive/refs/heads/master.tar.gz
-tar -xf Gruvbox-GTK-Theme-master.tar.gz; rm -rf Gruvbox-GTK-Theme-master.tar.gz; sudo mv -f ~/Gruvbox-GTK-Theme-master/icons/Gruvbox-Dark /usr/share/icons; rm -rf Gruvbox-GTK-Theme-master
+tar -xf master.tar.gz; rm -rf master.tar.gz; sudo mv -f ~/Gruvbox-GTK-Theme-master/icons/Gruvbox-Dark /usr/share/icons; rm -rf Gruvbox-GTK-Theme-master
 
 echo -e "\e[1;32mAll done!\e[m"
