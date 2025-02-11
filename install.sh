@@ -28,10 +28,10 @@ tar -cf hgs_backup.tar ~/.config/hypr ~/.config/waybar ~/.config/rofi ~/.config/
 # Importing new configs
 
 echo -e "\e[1;32mImporting new configs...\e[m"
-cp -f ~/hgs/dots/hypr/* ~/.config/hypr
-cp -f ~/hgs/dots/kitty/* ~/.config/kitty
-cp -f ~/hgs/dots/rofi/* ~/.config/rofi
-cp -f ~/hgs/dots/waybar/* ~/.config/waybar/*
+mkdir ~/.config/hypr; cp -rf ~/hgs/dots/hypr ~/.config
+mkdir ~/.config/kitty; cp -rf ~/hgs/dots/kitty ~/.config
+mkdir ~/.config/rofi; cp -rf ~/hgs/dots/rofi ~/.config
+mkdir mkdir ~/.config/waybar; cp -rf ~/hgs/dots/waybar ~/.config
 cp -f ~/hgs/dots/starship.toml ~/.config
 cp -rf ~/hgs/hgs_wallpapers ~/Pictures
 
@@ -43,18 +43,9 @@ wget -q https://github.com/sainnhe/capitaine-cursors/archive/refs/heads/master.t
 tar -xf master.tar.gz; rm -rf master.tar.gz; mv -f ~/master/capitaine-cursors-master ~/master/capitaine
 sudo cp -rf ~/master/capitaine /usr/share/icons; rm -rf master
 
-cp -f ~/hgs/dots/gtk/* ~/.config/gtk-4.0
+mkdir ~/.config/gtk-4.0; cp -rf ~/hgs/dots/gtk ~/.config
 
 wget -q https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/archive/refs/heads/master.tar.gz
-tar -xf master.tar.gz; rm -rf master.tar.gz; sudo mv -rf ~/master/Gruvbox-GTK-Theme-master/icons/Gruvbox-Dark /usr/share/icons; rm -rf master
+tar -xf master.tar.gz; rm -rf master.tar.gz; sudo mv -f ~/master/Gruvbox-GTK-Theme-master/icons/Gruvbox-Dark /usr/share/icons; rm -rf master
 
 echo -e "\e[1;32mAll done!\e[m"
-
-# Confirmation
-
-read -p $'\e[1;32mDo you want to log out to apply the settings? y/n: \e[m' choice
-if [ $choice == "y" ]; then
-    hyprctl dispatch exit
-elif [ $choice == "n" ]; then
-    exit 0
-fi
