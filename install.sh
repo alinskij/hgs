@@ -28,12 +28,12 @@ tar -cf hgs_backup.tar ~/.config/hypr ~/.config/waybar ~/.config/rofi ~/.config/
 # Importing new configs
 
 echo -e "\e[1;32mImporting new configs...\e[m"
-mkdir ~/.config/hypr; cp -rf ~/hgs/dots/hypr ~/.config
-mkdir ~/.config/kitty; cp -rf ~/hgs/dots/kitty ~/.config
-mkdir ~/.config/rofi; cp -rf ~/hgs/dots/rofi ~/.config
-mkdir ~/.config/waybar; cp -rf ~/hgs/dots/waybar ~/.config
+cp -rf ~/hgs/dots/hypr ~/.config
+cp -rf ~/hgs/dots/kitty ~/.config
+cp -rf ~/hgs/dots/rofi ~/.config
+cp -rf ~/hgs/dots/waybar ~/.config
 cp -f ~/hgs/dots/starship.toml ~/.config
-cp -rf ~/hgs/hgs_wallpapers ~/Pictures
+cp -rf ~/hgs/hgs-pctrs ~/Pictures
 
 # Installing gruvbox theme
 
@@ -43,7 +43,7 @@ wget -q https://github.com/sainnhe/capitaine-cursors/archive/refs/heads/master.t
 tar -xf master.tar.gz; rm -rf master.tar.gz; mv -f ~/capitaine-cursors-master/ ~/capitaine
 sudo cp -rf ~/capitaine /usr/share/icons; rm -rf capitaine
 
-mkdir ~/.config/gtk-4.0; cp -rf ~/hgs/dots/gtk ~/.config
+cp -rf ~/hgs/dots/gtk-4.0 ~/.config
 
 wget -q https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/archive/refs/heads/master.tar.gz
 tar -xf master.tar.gz; rm -rf master.tar.gz; sudo mv -f ~/Gruvbox-GTK-Theme-master/icons/Gruvbox-Dark /usr/share/icons; rm -rf Gruvbox-GTK-Theme-master
