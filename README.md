@@ -14,7 +14,7 @@
 > [!IMPORTANT]
 > This config is adapted for the `pacman` package manager, if you are using any other, install all the dependencies manually and copy the configs from the repository
 ```
-git clone https://github.com/alinskij/hgs; bash hgs/install.sh
+git clone https://github.com/alinskij/hgs.git; bash hgs/install.sh
 ```
 ## Post installation
 + Change the screen resolution and refresh rate by following the official [instructions](https://wiki.hyprland.org/Configuring/Monitors)
