@@ -25,7 +25,8 @@ git clone https://github.com/alinskij/hgs.git; bash hgs/install.sh
 > The installation script creates an archive with past configs, it is located in the home directory
 ## Hotkeys
 `SUPER` - Apps menu  
-`SUPER + L` - Lock screen
+`SUPER + L` - Lock screen  
+`SUPER + Q` - Terminal (kitty)
 ## Photos 
 ![1](https://github.com/alinskij/hgs/blob/main/preview/1.png)
 ![2](https://github.com/alinskij/hgs/blob/main/preview/2.png)
