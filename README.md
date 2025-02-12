@@ -8,7 +8,8 @@
 
 ## Information
 + This repository contains a custom configuration for `hyprland`, optimized for convenience, minimalism, and smooth operation. The configuration is intended for Arch Linux users and is installed using `pacman`. However, you can manually configure it on other distributions by installing all the dependencies yourself  
-+ GTK theme and icons borrowed from [here](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme), see here for problems with the theme
++ GTK theme and icons taken from [here](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme), see here for problems with the theme
++ Сursors taken from [here](https://github.com/sainnhe/capitaine-cursors)
 ## Installation
 > [!IMPORTANT]
 > This config is adapted for the `pacman` package manager, if you are using any other, install all the dependencies manually and copy the configs from the repository
