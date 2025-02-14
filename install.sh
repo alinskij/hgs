@@ -3,7 +3,7 @@
 # Installing dependencies
 
 cd; echo -e "\e[1;32mInstalling dependencies...\e[m"
-sudo pacman -S wget nerd-fonts qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprland hyprlock hyprpaper hyprpolkitagent rofi-wayland waybar kitty starship nwg-look thunar parole mousepad
+sudo pacman -S wget nerd-fonts qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprland hyprlock hyprpaper hyprpolkitagent rofi-wayland waybar kitty starship nwg-look thunar parole mousepad ristretto
 
 # Configuring starship
 
