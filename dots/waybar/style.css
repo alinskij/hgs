@@ -13,8 +13,7 @@ color: #3c3836;
 #pulseaudio,
 #language,
 #network,
-#tray,
-#custom-pacman {
+#tray {
 margin: 3px;
 padding: 0;
 background-color: #d5c4a1;
