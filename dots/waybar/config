@@ -1,6 +1,6 @@
 {
 "layer": "top",
-"modules-left": ["tray", "hyprland/workspaces", "custom/pacman"],
+"modules-left": ["tray", "hyprland/workspaces"],
 "modules-center": ["clock"],
 "modules-right": ["pulseaudio", "hyprland/language", "network", "group/power"],
 "height": 30,
@@ -28,16 +28,6 @@
 "persistent-workspaces": {
 "*": 5,
 },
-"tooltip": false
-},
-
-"custom/pacman": {
-"format": "{} updates",
-"interval": 1000,
-"exec": "checkupdates | wc -l",
-"exec-if": "exit 0",
-"on-click": "kitty sh -c 'sudo pacman -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
-"signal": 8,
 "tooltip": false
 },
 
